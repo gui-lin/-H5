@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../css/logIn.css" type="text/css">
+    <link rel="stylesheet" href="../css/reset%20.css" type="text/css">
+
+</head>
+<body>
+    <div class="top">
+        <div class="tu">
+            <a href="#"><img src="../img/zhongjiuloginlog.png" alt=""></a>
+            <b></b>
+        </div>
+    </div>
+        <div class="tu2">
+            <div class="box">
+                <div class="box-left">
+                    <img src="../img/pcloginpic.png" alt="">
+                </div>
+                <div class="box-center">
+                   <ul class="dianji">
+                       <li class="saoma" >
+                           扫码登录
+                       </li>
+                       <li class="saoma2" >
+                           账户登录
+                       </li>
+                   </ul>
+
+                    <div class="erweima" id="saoma">
+                        <div class="saoma-login">
+                            <p>
+                                <img src="../img/GetQR.gif" alt="">
+                                <span>打开 <a href="#">中酒网APP</a></span>
+                                <span>扫描二维码</span>
+                            </p>
+                        </div>
+                        <div class="frt">
+                             <img src="../img/sao_2.png" alt="">
+                        </div>
+                    </div>
+                    <div class="shuru" id="saoma2">
+                        <div class="from">
+                            <div class="gong">
+                                <i></i>
+                                <span>公共场所不建议自动登录，以防账号丢失</span>
+                            </div>
+                            <div class="input-box">
+                                <div class="user">
+                                    <i></i>
+                                    <input class="text" type="text" id="loginname" placeholder="用户名" >
+                                </div>
+                                <div class="password">
+                                    <i></i>
+
+                                    <input class="text" type="password"
+                                    id="password" placeholder="密码" >
+                                </div>
+                                <div class="yanzheng">
+                                    <img src="../img/u4.png" alt="">
+                                    <span class="span1">短信验证码登录</span>
+                                    <input class="duoxuan" type="checkbox" id="autologin">
+                                    <span class="span2">自动登录</span>
+                                    <a href="#">忘记密码</a>
+                                </div>
+                               <button id="bn">登录</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <b class="qq"></b>
+                            <span>QQ</span>
+                        </a>
+                        <span class="line">|</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <b class="qq weibo"></b>
+                            <span>微博</span>
+                        </a>
+                        <span class="line">|</span>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <b class="qq weixin"></b>
+                            <span>微信</span>
+                        </a>
+                        <span class="line">|</span>
+                    </li>
+                    <li class=" red">
+                        <a href="#">立即注册</a>
+                    </li>
+                </ul>
+            </div>
+            </div>
+        </div>
+       <div class="foot">
+        <div class="copy">
+            <p>Copyright © 2018   中酒网 版权所有</p>
+        </div>
+    </div>
+    <script>
+        init();
+        var ul,li,li2,li3,li4,bn;
+        function init() {
+            li=document.getElementById("saoma");
+             li2=document.getElementById("saoma2");
+             ul=document.getElementsByClassName("dianji")[0];
+             li3=document.getElementsByClassName("saoma")[0];
+             li4=document.getElementsByClassName("saoma2")[0];
+             bn=document.getElementById("bn");
+             bn.addEventListener("click",bnClickHandler);
+
+            ul.addEventListener("click",clickHandler);
+            ul.addEventListener("mouseenter",mouseHander);
+            ul.addEventListener("mouseleave",mouseHander);
+        }
+//        点击切换
+        function clickHandler(e) {
+            var list=Array.from(ul.children);
+            var index=list.indexOf(e.target);
+            if(index===0){
+                li.style.display="block";
+                li2.style.display="none";
+            }
+            if(index===1){
+                li.style.display="none";
+                li2.style.display="block";
+                li4.style.fontWeight="bold" ;
+                li3.style.fontWeight="normal" ;
+                li4.style.color="#e54b54";
+                li3.style.color="#333333";
+            }
+
+        }
+//        鼠标滑过
+        function mouseHander(e) {
+            if(e.type==="mouseenter"){
+               ul.style.cursor="pointer";
+            }
+            if(e.type==="mouseleave"){
+                ul.style.cursor="text";
+            }
+        }
+        function bnClickHandler(e) {
+
+            var username=document.getElementById("loginname").value;
+            var password=document.getElementById("password").value;
+            var obj={username:username,password:password,type:1};
+            ajax(JSON.stringify(obj));
+        }
+        function ajax(data) {
+            var xhr=new XMLHttpRequest() || new ActiveXObject("Microsoft,XMLHTTP");
+            xhr.open("post","http://localhost:1005");
+            xhr.send(data);
+            xhr.onreadystatechange=function () {
+                if(xhr.readyState==4){
+                    if(xhr.status==200){
+                        if(xhr.responseText=="没找到"){
+                            alert("该用户名不存在");
+                            return;
+                        }
+                        window.location.href='../../index.html'
+                    }else {
+                        alert("失败")
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

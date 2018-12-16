@@ -1,0 +1,237 @@
+body{
+    background-color: #eef3fa;
+}
+.top{
+    width: 100%;
+    height: 30px;
+    border-bottom: 1px solid #eeeeee;
+    line-height: 30px;
+    background: #f7f7f7;
+}
+.top-center{
+    width: 990px;
+    margin: 0 auto;
+    font-size: 12px;
+}
+.top-center span,.top-center a{
+    display: inline-block;
+
+}
+.fav{
+    float: left;
+    padding: 0 11px 0 16px;
+    position: relative;
+    cursor: pointer;
+    color: #333333;
+}
+.fav i{
+    top: 8px;
+    left: 0;
+    width: 13px;
+    height: 13px;
+    background: url("../img/20130725.png") no-repeat 0 0 ;
+    cursor: pointer;
+    position: absolute;
+    transition: transform .2s ease-in 0s;
+    -webkit-transition: -webkit-transform .2s ease-in 0s;
+}
+.a{
+    float: right;
+    display: inline-block;
+    height:30px;
+    padding: 0 11px 0 12px;
+}
+.a a{
+    color: #333333;
+}
+.logo{
+    width: 990px;
+    margin: 0 auto;
+    height: 80px;
+}
+.log{
+    padding: 10px 0;
+    float: none;
+    margin: 0;
+    position: relative;
+}
+.log a{
+    color: #666666;
+}
+.log img{
+    display: inline-block;
+    border: 0 none;
+    font-size: 0;
+}
+.log b{
+    position: absolute;
+    font-size: 30px;
+    text-align: center;
+    background-color: #f1f1f1;
+    width: 150px;
+    height: 46px;
+    top:18px;
+    margin-left: 20px;
+}
+.denglu{
+    width: 990px;
+    padding-right: 10px;
+    position: relative;
+    overflow: visible;
+
+    border-bottom: 1px solid #dddddd;
+    height: 32px;
+    line-height: 32px;
+    background: #f2f2f2;
+    margin: 0 auto -1px;
+}
+.denglu span{
+    float: right;
+    font-size: 12px;
+}
+.mc{
+    padding: 30px 0 20px;
+    border: solid #dddddd;
+    border-width: 0 1px 1px ;
+    width: 988px;
+    height: 543px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+.foot{
+    width: 990px;
+    margin: 0 auto;
+}
+.copy{
+    padding-bottom: 30px;
+    text-align: center;
+}
+.copy p{
+    margin: 10px 0;
+    font-size: 12px;
+}
+.item{
+    padding-top: 9px;
+    height: 60px;
+    line-height: 34px;
+    position: relative;
+
+}
+.item .label{
+    display: inline-block;
+    width: 190px;
+    text-align: right;
+    font-size: 14px;
+    color: #999;
+    padding-right: 10px;
+    position: relative;
+    float: left;
+}
+.item-ifo{
+    position: relative;
+    width: 270px;
+}
+.f1{
+    float: left;
+
+}
+.item .text{
+    width: 238px;
+    height: 16px;
+    padding:10px 25px 10px 5px ;
+    border: 1px solid #cccccc;
+    float: none;
+    font-size: 14px;
+    color: #999999;
+}
+.item-ifo i{
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    background: url("../img/login-all-bg.png") no-repeat ;
+
+}
+#i-name{
+    background-position: -373px -111px;
+    width: 16px;
+    height: 16px;
+}
+#i-name-1,#i-name-2{
+    background-position: -346px -108px;
+    width: 14px;
+    height: 19px;
+}
+.hidden,ss2{
+    float: left;
+    width: 260px;
+    height: 36px;
+    padding: 0 5px;
+    border: 1px solid #cccccc;
+    margin-left: 3px;
+    background-color: #f7f7f7;
+    color: #666666;
+    font-size: 12px;
+}
+
+.hidden p{
+    font-size: 12px;
+}
+.hidden .lin{
+    line-height: 16px;
+}
+#aa2{width: 100px;
+    text-align: center;
+
+}
+#yz{width: 132px}
+#yz .shouji{width: 132px}
+#password-3{width: 100px}
+.huadong .row .verify-bar-area{
+    width: 300px;
+    height: 34px;
+    line-height: 34px;
+}
+.huadong{
+    width: 100%;
+    height: 60px;
+}
+.id{
+    float: left;
+    width: 190px;
+    text-align: right;
+    color: #999999;
+    font-size: 14px;
+    height: 34px;
+    line-height: 34px;
+    display: inline-block;
+
+}
+.row{
+    float: left;
+    margin-left: 10px;
+}
+.duoxuan{
+    margin-left: 203px;
+    margin-top: 13px;
+}
+.duoxuan a{
+    color:#e3393c ;
+}
+#bn{
+   width: 270px;
+    height: 36px;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: 800;
+     background: url("../img/regist-btn.jpg");
+    border: none;
+    margin-left: 203px;
+    margin-top: 46px;
+    cursor: pointer;
+}
+.hid{
+    display: none;
+}
+.yin{
+    display: none;
+}
